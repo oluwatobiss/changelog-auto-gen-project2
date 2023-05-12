@@ -7,8 +7,15 @@
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": "conventionalcommits",
-      "infile": "CHANGELOG.md"
+      "infile": "CHANGELOG.md",
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          { "type": "feat", "section": "🚀 Newly Added Features" },
+          { "type": "fix", "section": "🩹 Patched Changes" },
+          { "type": "chore", "section": "⚒️ Routine Maintenance" }
+        ]
+      }
     }
   }
 }
